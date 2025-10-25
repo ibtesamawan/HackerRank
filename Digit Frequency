@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    char str[1000];
+    int freq[10] = {0};
+
+    scanf("%s", str);
+
+    int i = 0;
+    while (str[i] != '\0') {         // loop until end of string
+        if (str[i] >= '0' && str[i] <= '9') {
+            int digit = str[i] - '0'; // convert char to actual number
+            freq[digit]++;
+        }
+        i++;
+    }
+
+    for (int j = 0; j < 10; j++) {
+        printf("%d ", freq[j]);
+    }
+
+    return 0;
+}
