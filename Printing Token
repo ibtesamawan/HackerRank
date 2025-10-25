@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    char sentence[1000];
+    fgets(sentence, sizeof(sentence), stdin);
+
+    int i = 0;
+    while (sentence[i] != '\0') {   // loop until end of string
+        if (sentence[i] == ' ') {
+            printf("\n");
+        } else {
+            printf("%c", sentence[i]);
+        }
+        i++;
+    }
+
+    return 0;
+}
